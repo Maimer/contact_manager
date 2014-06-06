@@ -12,3 +12,21 @@
 <% for i in (1..((@total / 2.0).ceil)) %>
   <a href="/?page=<%= i %>"><%= i %></a> |
 <% end %>
+
+</br>
+</br>
+
+<form action="/" method="post">
+  <input type="text" name="search">
+  <input type="submit">
+</form>
+
+</br>
+</br>
+
+<form action="/add" method="post">
+  First Name: <input type="text" name="first_name">
+  Last Name: <input type="text" name="last_name">
+  Phone #: <input type="text" name="phone_number">
+  <input type="submit">
+</form>
