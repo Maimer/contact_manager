@@ -2,6 +2,13 @@
 
 <ul>
   <% @contacts.each do |contact| %>
-    <li><%= contact.name %> - <%= contact.phone_number %></li>
+    <li><a href="/contacts/<%= contact.id %>"><%= contact.name %></a> -
+    <%= contact.phone_number %></li>
   <% end %>
 </ul>
+
+</br>
+
+<% for i in (1..((@total / 2.0).ceil)) %>
+  <a href="/?page=<%= i %>"><%= i %></a> |
+<% end %>
